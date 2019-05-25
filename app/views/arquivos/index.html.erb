@@ -1,0 +1,49 @@
+  <div class="col-md-8 col-md-offset-2 col-xs-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Ano</th>
+          <th>Licenca</th>
+          <th colspan="2">
+            Ações
+            <%= link_to 'Novo Arquivo', new_user_arquivo_path(current_user), class: 'btn btn-success' %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @arquivos.empty? %>
+          <tr>
+            <td colspan="4" class="text-center">
+              <h3>Sem arquivos cadastrados.</h3>
+              <%= link_to 'click aqui', new_user_arquivo_path(current_user) %> para cadastrar um novo arquivo
+            </td>
+          </tr>
+        <% end %>
+        <% @arquivos.each do |f| %>
+        <tr>
+          <td>
+            <%= f.titulo %>
+          </td>
+          <td>
+            <%= f.autor %>
+          </td>
+          <td>
+            <%= f.ano %>
+          </td>
+          <td>
+            <%= f.licenca %>
+          </td>
+          <td>
+            <%= link_to 'Editar', edit_user_arquivo_path(current_user, f), class: 'btn btn-warning' %>
+          </td>
+          <td>
+            <%= link_to 'Excluir', user_arquivo_path(current_user, f), method: :delete, class: 'btn btn-danger', data: { confirm: 'Tem certeza que deseja excluir?' } %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
