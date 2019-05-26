@@ -1,25 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    Projeto de indexação e recuperação de Recursos Educacionais Abertos em repositórios suportados por licenças Creative Commons.
 
-Things you may want to cover:
+    Requisitos:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# MACK_TCC
+    Ruby 2.3.0 ou Superior
+    PostgreSQL
+    Rails 5
