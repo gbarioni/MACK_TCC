@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_023157) do
+ActiveRecord::Schema.define(version: 2019_05_26_042932) do
+
+  enable_extension "plpgsql"
+
+  create_table "anexos", force: :cascade do |t|
+    t.string "diretorio_anexo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "arquivos", force: :cascade do |t|
     t.string "titulo"
